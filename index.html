@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- CONTROLS -->
+<button id="themeToggle">🌙</button>
+<button id="musicToggle">🎵</button>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HEARTS -->
+<div class="hearts"></div>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <h1 class="glow">For My Valentine ❤️</h1>
+  <p class="subtitle">Some love stories are hidden… find ours.</p>
+
+  <div class="gallery">
+    <img src="IMG_2001.PNG">
+    <img src="IMG_4083.JPG">
+    <img src="IMG_7651.JPG">
+    <img src="IMG_9475.PNG">
+  </div>
+
+  <!-- SECRET BUTTONS -->
+  <button class="secret s1" onclick="secretJump('love')"></button>
+  <button class="secret s2" onclick="secretJump('password')"></button>
+  <button class="secret s3" onclick="secretJump('cinema')"></button>
+  <button class="secret s4" onclick="secretJump('letter')"></button>
+</section>
+
+<!-- PASSWORD -->
+<section id="password" class="page">
+  <h2>🔐 Secret Access</h2>
+  <p>Only you know the key.</p>
+  <input type="password" id="pass" placeholder="Our word…">
+  <button onclick="checkPassword()">Enter</button>
+</section>
+
+<!-- LOVE -->
+<section id="love" class="page">
+  <h2>❤️</h2>
+  <p class="big-text">
+    Loving you is my favorite thing I do without thinking.
+  </p>
+  <button onclick="secretJump('home')">⬅ Back</button>
+</section>
+
+<!-- ARMENIAN LETTER -->
+<section id="letter" class="page">
+  <h2>Իմ սեր ❤️</h2>
+  <p id="typeText" class="armenian"></p>
+  <button onclick="secretJump('home')">⬅ Վերադառնալ</button>
+</section>
+
+<!-- CINEMA -->
+<section id="cinema" class="page">
+  <h2>🎬 Our Movie Moments</h2>
+
+  <div class="movie">
+    <h3>Mr. & Mrs. Smith</h3>
+    <p>⏱ 01:34:20</p>
+    <span>
+      Այդ պահին հիշիր՝ նույնիսկ երբ աշխարհը խառնվում է,  
+      ես միշտ քո կողքին եմ։
+    </span>
+  </div>
+
+  <div class="movie">
+    <h3>The Notebook</h3>
+    <p>⏱ 01:52:10</p>
+    <span>
+      Սերը ընտրություն է… և ես միշտ ընտրում եմ քեզ։
+    </span>
+  </div>
+
+  <button onclick="secretJump('home')">⬅ Back</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
